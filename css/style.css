@@ -16,7 +16,7 @@ header {
 }
 /* Main container */
 main {
-    height: calc(100% - 140px);
+    height: calc(100% - 150px);
     width: 90%;
     margin: auto;
     padding-top: 20px;
@@ -39,15 +39,17 @@ ul {
 /*--------------
     HEADER
 --------------*/
-header > div {
-    text-align: right;
+header > div.row {
+    justify-content: flex-end;
+    align-items: center;
 }
-header > div > * {
+header div > * {
     background-color: #4a4a4a;
-    padding: 5px;
     border-radius: 5px;
+    margin-right: 6px;
 }
 header i {
+    display: inline-block;
     margin-right: 4px;
 }
 /*--------------
@@ -56,7 +58,7 @@ header i {
 .col-participant {
     position: relative;
     width: calc(100% / 7 - 10px);
-    margin: 5px;
+    padding: 5px;
 }
 .col-participant img {
     display: block;
@@ -103,10 +105,18 @@ footer > .row{
 }
 .icona i {
     display: block;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 .green {
     color: lime;
+}
+/* Arrow up positioning*/
+footer ul > i {
+    position: relative;
+    top: 20px;
+}
+.col-footer-middle > i{
+    right: 20px;
 }
 .col-end-meeting span {
     position: absolute;
