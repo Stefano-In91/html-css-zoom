@@ -6,29 +6,29 @@
     margin: 0;
     padding: 0;
 }
+/*--------------
+    COMMON
+--------------*/
 body {
     height: 100vh;
     background-color: black;
 }
 header {
     height: 40px;
-    padding: 10px 0 0px;
+    padding: 10px 0 0;
 }
 /* Main container */
 main {
-    height: calc(100% - 150px);
+    height: calc(100% - 140px);
     width: 90%;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 10px;
     overflow-y: auto;
 }
 footer {
     height: 100px;
     background-color: #222222;
 }
-/*--------------
-    COMMON
---------------*/
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -43,22 +43,24 @@ header > div.row {
     justify-content: flex-end;
     align-items: center;
 }
-header div > * {
+header div > span {
     background-color: #4a4a4a;
     border-radius: 5px;
     margin-right: 6px;
+    padding: 5px;
 }
 header i {
     display: inline-block;
-    margin-right: 4px;
+    margin:0 4px;
 }
+
 /*--------------
     MAIN
 --------------*/
 .col-participant {
     position: relative;
-    width: calc(100% / 7 - 10px);
-    margin: 5px;
+    width: calc(100% / 7 - 20px);
+    margin: 10px;
 }
 .col-participant img {
     display: block;
@@ -91,16 +93,16 @@ footer > .row{
     text-align: center;
 }
 .col-end-meeting {
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
     height: 100%;
-    width: 150px;
-    color: red;
+    width: 10%;
 }
 .col-footer-left .icona {
     width: 40%;
 }
 .col-footer-middle .icona {
-    width: calc((70% - 150px) / 8);
+    width: calc(80% / 8);
     margin: 0 5px;
 }
 .icona i {
@@ -118,13 +120,18 @@ footer ul > i {
 .col-footer-middle > i{
     right: 20px;
 }
-.col-end-meeting span {
+.col-end-meeting div {
+    position: relative;
+    height: 100%;
+    width: 200px;
+    background-color: #4a4a4a;
+    color: red;
+}
+.col-end-meeting div span {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #4a4a4a;
-    padding: 30px 45px;
 }
 /*--------------
     TYPO
