@@ -19,7 +19,7 @@ header {
 }
 /* Main container */
 main {
-    height: calc(100% - 140px);
+    height: calc(100% - 140px); /* -(header h.px + footer h.px)*/
     width: 90%;
     margin: auto;
     padding-top: 20px;
@@ -33,27 +33,29 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
-ul {
-    list-style: none;
+button {
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a4a4a;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.5s;
 }
 /*--------------
     HEADER
 --------------*/
-header > div.row {
+header div.row {
     justify-content: flex-end;
     align-items: center;
 }
-header div > span {
-    background-color: #4a4a4a;
-    border-radius: 5px;
-    margin-right: 6px;
-    padding: 5px;
+header div.row button:last-child {
+    margin-right: 10px;
 }
-header i {
-    display: inline-block;
-    margin:0 4px;
+header button {
+    font-size: 15px;
+    margin-left: 5px;
 }
-
 /*--------------
     MAIN
 --------------*/
@@ -81,57 +83,52 @@ footer > .row{
     align-items: center;
     height: 100%;
 }
-.col-footer-left {
+footer div.row > div {
     display: flex;
-    width: 10%;
+}
+.col-footer-left {
+    width: 15%;
     text-align: center;
+    padding-left: 10px;
 }
 .col-footer-middle {
-    display: flex;
-    width: 80%;
+    width: 70%;
     justify-content: center;
     text-align: center;
 }
 .col-end-meeting {
-    display: flex;
     justify-content: flex-end;
     height: 100%;
-    width: 10%;
-}
-.col-footer-left .icona {
-    width: 40%;
-}
-.col-footer-middle .icona {
-    width: calc(80% / 8);
-    margin: 0 5px;
-}
-.icona i {
-    display: block;
-    padding-bottom: 10px;
-}
-.green {
-    color: lime;
-}
-/* Arrow up positioning*/
-footer ul > i {
-    position: relative;
-    top: 20px;
-}
-.col-footer-middle > i{
-    right: 20px;
-}
-.col-end-meeting div {
-    position: relative;
-    height: 100%;
-    width: 200px;
-    background-color: #4a4a4a;
+    width: 15%;
     color: red;
 }
-.col-end-meeting div span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.col-footer-left button, .col-footer-middle button {
+    margin-right: 4px;
+}
+.col-end-meeting button {
+    background-color: #4a4a4a;
+    border-radius: 0;
+    padding: 0 40px;
+}
+footer button {
+    background-color: inherit;
+    font-size: 16px;
+    padding: 12px;
+}
+footer button i {
+    padding-bottom: 8px;
+}
+/*--------------
+    HOVERS
+--------------*/
+header button:hover, .col-end-meeting button:hover {
+    background-color: gray;
+    transition: background-color 0.5s;
+}
+
+.col-footer-left button:hover, .col-footer-middle button:hover {
+    background-color: #4a4a4a;
+    transition: background-color 0.5s;
 }
 /*--------------
     TYPO
@@ -139,4 +136,7 @@ footer ul > i {
 body {
     font-family: 'Lato', sans-serif;
     color: white;
+}
+.green {
+    color: lime;
 }
